@@ -77,7 +77,7 @@ const App = () => {
       const updatedNote = await response.json();
 
       const updatedNotesList = notes.map((note) => {
-        note.id === selectedNote.id ? updatedNote : note;
+        return note.id === selectedNote.id ? updatedNote : note;
       });
   
       setNotes(updatedNotesList);
